@@ -22,7 +22,7 @@ song_playlist_dict = [
     ["Jason Goodman", "Pompeii"],
 ]
 
-print("\033[1;32m▶\033[0m",end="")
+print("\033[1;32m\t\t\t\t\t▶\033[0m",end="")
 # print("\u001b[42m     \033[0m")
 # print("\u001b[42m \033[0;32m\u001b[40m|\\\u001b[42m   \033[0m")
 # print("\u001b[42m \033[0;32m\u001b[40m| \\\u001b[42m   \033[0m     \033[0;32m\u001b[40m-→\033[0m    \033[0;32m\u001b[40m———\033[0m")
@@ -35,9 +35,9 @@ print()
 print()
 # print(len("Title                    "))
 my_max = 25
-print("\033[0;31m#\033[0m \033[0;34mTitle\033[0m                      \033[1;32mAlbum\033[0m                    \033[1;35mDate added\033[0m                    🕘")
+print("\t\t\t\t\t\033[0;31m#\033[0m \033[0;34mTitle\033[0m                      \033[1;32mAlbum\033[0m                    \033[1;35mDate added\033[0m                    🕘")
 for i in range(len(song_playlist_dict)):
-    print(f"\033[0;31m{i+1}\033[0m ", end="")
+    print(f"\t\t\t\t\t\033[0;31m{i+1}\033[0m ", end="")
     for j in range(len(song_playlist_dict[i])):
         artist_or_song = "Artist"
         if j == 0:
@@ -56,10 +56,10 @@ for i in range(len(song_playlist_dict)):
             remainder = my_max - len(artist_or_song) - len(song_playlist_dict[i][j])
             total = len(artist_or_song) + len(song_playlist_dict[i][j])
             if total <= my_max:
-                print(f"  \033[0;34m{artist_or_song}: {song_playlist_dict[i][j]}\033[0m" + str(" " * remainder))
+                print(f"\t\t\t\t\t  \033[0;34m{artist_or_song}: {song_playlist_dict[i][j]}\033[0m" + str(" " * remainder))
             else:
                 word = song_playlist_dict[i][j]
                 first = len(song_playlist_dict[i][j])
                 total = my_max - first
-                print(f"  \033[0;34m{artist_or_song}: {word[0:total-12]}...\033[0m")
+                print(f"\t\t\t\t\t  \033[0;34m{artist_or_song}: {word[0:total-12]}...\033[0m")
     print()
