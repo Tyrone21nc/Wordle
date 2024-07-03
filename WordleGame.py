@@ -236,7 +236,7 @@ else:
     else:
         if random_word == attempt.upper():
             print("😀😀😀😀 Wordle in", tries, "😀😀😀😀")
-            print("Good shit lil nigga!👨🏿‍🦱")
+            print("Good job")
             print("You finished in:", int(time.time() - start_time), "seconds")
         else:
             print("You lost Wordle 😤😤😤")
