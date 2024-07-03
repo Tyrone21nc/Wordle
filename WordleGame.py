@@ -242,4 +242,4 @@ else:
             print("You lost Wordle 😤😤😤")
             print("I'd be mad too if I were you")
             print("You ended in:", int(time.time() - start_time), "seconds")
-"I am making a change"
+"So everytime I make a change here on PyCh I need to commit and push"
