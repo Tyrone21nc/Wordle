@@ -1,5 +1,5 @@
 """
-Author: Romain Donfack Dzeinse
+Author: Romain Donfack Dzeisne
 Date: 1/19/24 about 8pm
 Finished on 1/20/24 1:03 am
 Objective: Build a Wordle Game
@@ -236,7 +236,7 @@ else:
     else:
         if random_word == attempt.upper():
             print("😀😀😀😀 Wordle in", tries, "😀😀😀😀")
-            print("Good job🦱")
+            print("Good shit lil nigga!👨🏿‍🦱")
             print("You finished in:", int(time.time() - start_time), "seconds")
         else:
             print("You lost Wordle 😤😤😤")
