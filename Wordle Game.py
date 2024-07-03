@@ -242,4 +242,3 @@ else:
             print("You lost Wordle 😤😤😤")
             print("I'd be mad too if I were you")
             print("You ended in:", int(time.time() - start_time), "seconds")
-"Testing to see if this will save the commit changes"
