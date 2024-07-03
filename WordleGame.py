@@ -244,3 +244,5 @@ else:
             print("You ended in:", int(time.time() - start_time), "seconds")
 "So everytime I make a change here on PyCh I need to commit and push"
 "So everytime I make a change here on Github, I need to press the commit changes button -> top right corner"
+
+"This is a push change I am making on PyCh"
