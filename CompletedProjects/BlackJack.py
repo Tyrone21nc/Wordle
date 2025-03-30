@@ -40,7 +40,7 @@ def blackjack():
             if round_counter > 1:
                 print()
             print(f"\033[40m++++++++This is round \033[31m{round_counter}\033[0m++++++++\033[0m")
-            print("type \033[7mdraw\033[0m when ready to draw your cards")
+            print("enter \033[7mdraw\033[0m when ready to draw your cards")
             print("Card 1")
             draw1 = input(">>> ").lower()
             if draw1 == "draw":

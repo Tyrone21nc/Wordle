@@ -2,16 +2,34 @@
 Author: Romain Dzeinse
 Date: 5/8/24 (Wednesday Morning right before CALC2 exam at 8am -> Lord please help me make better decisions)
 Time: 12:30 am
+Continued on: 7/2/24
+Time: 7:50 am
+File name: Infinite Runner
 """
 
 import pygame
+import random
 
 pygame.init()
+
+# Game constants
+white = (255, 255, 255)
+black = (0, 0, 0)
+green = (0, 255, 0)
+WIDTH = 450
+HEIGHT = 300
 
 # Game Window
 SCREEN_WIDTH = 1000  # it's in pixels
 SCREEN_HEIGHT = 1000
-screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
+screen = pygame.display.set_mode((WIDTH, HEIGHT))
+pygame.display.set_caption("Infinite Runner")  # This is the tittle of the page
+background = black
+
+# Game Variables
+score = 0
+player_x = 50
+player_y = 200
 
 # position and size of piece
 #                  ((posx, posy, leng, widt))

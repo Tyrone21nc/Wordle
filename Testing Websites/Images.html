@@ -1,10 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Styling images</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        img {
+            display: block;
+        }
+        body {
+            font-family: sans-serif, roboto;
+            min-height: 100vh;
+        }
+        .profile-pic-figure {
+            width: 35%;
+<!--            border: 2px solid #444;-->
+        }
+        .profile-pic-figure img {
+            width: 100%;
+            height: auto;
+            min-width: 100px;  <!--This says that when we shrink the page to the smallest quality to match the device, it won't get smaller than 100px;-->
+            border: 5px double purple;
+        }
+        .hero {
+<!--            border: 3px solid #0f0;-->
+        }
+        .example {
+            margin-top: 1rem;
+            padding-left: 20px;
+            border: 3px solid red;
+        }
+        .example img {
+            width: 25%;
+            height: auto;
+        }
+
+
+    </style>
+
 </head>
 <body>
-$END$
+
+<section class="hero">
+    <figure class="profile-pic-figure">
+        <img src="cali-pic.jpg" alt="Code.org logo" title="Romain chilling" width="400" height="400">
+        <figcaption>Romain Doe</figcaption>
+    </figure>
+</section>
+<!--    <section class="example">-->
+
+<!--        <img src="cali-pic.jpg" alt="Code.org logo" width="200" height="200">-->
+
+<!--    </section>-->
+
 </body>
 </html>

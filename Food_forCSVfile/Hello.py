@@ -1,5 +1,3 @@
-import csv
-
 with (open("My_csv_file.csv") as file):
     the_data = file.read()
     the_data = the_data.split("\n")
@@ -75,3 +73,5 @@ def draw_happy_face():
 
 
 print(draw_happy_face())
+
+

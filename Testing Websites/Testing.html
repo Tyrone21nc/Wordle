@@ -9,6 +9,7 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+<!--            background-color: #333;-->
         }
 
         body {
@@ -24,6 +25,29 @@
             padding: 2em;
         }
 
+        h1 {
+            font-weight: normal;
+            color: yellowgreen;
+            margin-bottom: 2em;
+        }
+
+        #photoArray {
+            display: grid;
+            grid-gap: .5em;
+            grid-template-areas:
+                "photoOne photoTwo PhotoThree"
+                "photoOne photoFour photoFive";
+            grid-template-columns: 1fr 20% 20%;
+        }
+
+        #photoArray > div {
+            border: 2px solid #EEE;
+        }
+
+        #photoArray > div:first-child{
+            grid-area: photoOne;
+            height: 450px;
+        }
 
     </style>
 
@@ -31,13 +55,18 @@
 </head>
 <body>
 
-    <div>
+    <div id="container">
+        <h1>Basic Grid 01</h1>
 
-        <div>
+        <section id="photoArray">
 
+            <div><img src="Cali-pic.jpg"></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
 
-
-        </div>
+        </section>
 
     </div>
 

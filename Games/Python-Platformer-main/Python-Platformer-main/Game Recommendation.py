@@ -31,7 +31,15 @@ def get_background(name):
     :param name: color of our background
     :return: list of all the background tiles we need to draw
     """
-    pass
+    image = pygame.image.load(join("assets", "Background", name))
+    # The first and second underscores are x and y, and since we don't care abt them we just denote
+    # them with the underscore placeholder
+    _, _, width, height = image.get_rect()
+    tiles = []
+
+    for i in range(WIDTH // width + 1):
+        for j in range(HEIGHT // + 1):
+            pos = [i * width, j * height]
 
 
 def main(my_window):
@@ -52,8 +60,5 @@ def main(my_window):
 
 if __name__ == "__main__":
     main(window)
-
-
-
 
 

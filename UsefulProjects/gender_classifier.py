@@ -3,7 +3,6 @@ Author: Romain Dzeinse
 Date: 4/27/24
 Objective: Write code that determines one's given gender based on body composition
 """
-
 from sklearn import tree
 
 # [height, weight, shoe size]
@@ -17,6 +16,8 @@ y = ["male", "female", "female", "female", "male", "male", "male",
 clf = tree.DecisionTreeClassifier()
 
 clf = clf.fit(x, y)
-
-prediction = clf.predict([[190, 70, 43]])
+first = int(input("ENTER FIRST NUM: "))
+second = int(input("ENTER SECOND NUM: "))
+third = int(input("ENTER THIRD NUM: "))
+prediction = clf.predict([[first, second, third]])
 print(prediction)

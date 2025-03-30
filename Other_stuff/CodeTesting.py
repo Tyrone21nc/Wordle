@@ -1,185 +1,186 @@
 import copy
-def func(x, y):
-    # base case
-    if x < y:
-        return x
-    # recursive case
-    else:
-        return func(x - y, y)
+if False:
+    def func(x, y):
+        # base case
+        if x < y:
+            return x
+        # recursive case
+        else:
+            return func(x - y, y)
 
 
-# print(func(20, 5))  # 0
-print(), print(), print()
+    # print(func(20, 5))  # 0
+    print(), print(), print()
 
-x = [1, 2, 3]
-y = [4, 5, 6]
-z = y
-y = x
-x = z
+    x = [1, 2, 3]
+    y = [4, 5, 6]
+    z = y
+    y = x
+    x = z
 
-x = [1, 2, 3]  # a different [1, 2, 3] list!
-y = x
-x.append(4)
-y.append(5)
-z = [1, 2, 3, 4, 5]  # a different list!
-x.append(6)
-y.append(7)
-y = "hello"
-
-
-def foo(lst):
-    lst.append("hello")
-    bar(lst)
+    x = [1, 2, 3]  # a different [1, 2, 3] list!
+    y = x
+    x.append(4)
+    y.append(5)
+    z = [1, 2, 3, 4, 5]  # a different list!
+    x.append(6)
+    y.append(7)
+    y = "hello"
 
 
-def bar(myLst):
-    print(myLst)
+    def foo(lst):
+        lst.append("hello")
+        bar(lst)
 
 
-# foo(x)
-# foo(z)
+    def bar(myLst):
+        print(myLst)
 
 
-# input = [("Mary", 27), ("Joe", 30), ("Ruth", 43), ("Bob", 17), ("Jenny", 22)]
-#
-# youngPeople = []
-#
-# for (person, age) in input:
-#     if age < 30:
-#         youngPeople.append(person)
-#     else:
-#         print("HAHA " + person + " is too old!")
-#
-# print("There are " + str(len(youngPeople)) + " young people")
+    # foo(x)
+    # foo(z)
 
 
-# printing all keys and their values in a dictionary all at once
-# input1 = {"Mary": 27, "Joe": 30, "Ruth": 43, "Bob": 17, "Jenny": 22}
+    # input = [("Mary", 27), ("Joe", 30), ("Ruth", 43), ("Bob", 17), ("Jenny", 22)]
+    #
+    # youngPeople = []
+    #
+    # for (person, age) in input:
+    #     if age < 30:
+    #         youngPeople.append(person)
+    #     else:
+    #         print("HAHA " + person + " is too old!")
+    #
+    # print("There are " + str(len(youngPeople)) + " young people")
 
-# for (person, age) in input1.items():
-#     print(person, age)
-# print()
-# printing all indices in a list all at once, in a single for loop
-# input2 = [("Mary", 27), ("Joe", 30), ("Ruth", 43), ("Bob", 17), ("Jenny", 22)]
-# for person2, age2 in input2:
-#     print(person2, age2)
-#
-# decade = {
-#     "...cheese":["food\t"],
-#     "cheese":[]
-# }
-# theLett = input("Enter a word: ")
-# if "...cheese" == theLett or theLett == "cheese":
-#     pass
-# else:
-#     print("The cheese is there")
-# thing = decade.get("...cheese")
-# print(thing[0], "Something else")
-# def fib(n):
-#
-#     # base case n = 0
-#     if n == 0:
-#         return 0
-#     # base case n = 1
-#     elif n == 1:
-#         return 1
-#     # case n > 1
-#     else:
-#         return 1 + fib(n-1)
-#
-# print(fib(5))
 
-# print(1 % 3)  # This will be 1 because 1 goes into 3 0 original_times with remainder 1
-# print(2 % 3)  # This will be 2 because 2 goes into 3 0 original_times (2/3) with 2 remaining
-# print(3 % 7)  # Same thing here. The remainder will be 3 because 3 goes into 7 0 original_times with 3 remaining
+    # printing all keys and their values in a dictionary all at once
+    # input1 = {"Mary": 27, "Joe": 30, "Ruth": 43, "Bob": 17, "Jenny": 22}
 
-# my_dict = {
-#     "Claire": 1,
-#     "Eric": 0,
-#     100: 3
-# }
-# if my_dict["Eric"]:
-#     print(True)
-# if "Eric" in my_dict:
-#     print(False)
+    # for (person, age) in input1.items():
+    #     print(person, age)
+    # print()
+    # printing all indices in a list all at once, in a single for loop
+    # input2 = [("Mary", 27), ("Joe", 30), ("Ruth", 43), ("Bob", 17), ("Jenny", 22)]
+    # for person2, age2 in input2:
+    #     print(person2, age2)
+    #
+    # decade = {
+    #     "...cheese":["food\t"],
+    #     "cheese":[]
+    # }
+    # theLett = input("Enter a word: ")
+    # if "...cheese" == theLett or theLett == "cheese":
+    #     pass
+    # else:
+    #     print("The cheese is there")
+    # thing = decade.get("...cheese")
+    # print(thing[0], "Something else")
+    # def fib(n):
+    #
+    #     # base case n = 0
+    #     if n == 0:
+    #         return 0
+    #     # base case n = 1
+    #     elif n == 1:
+    #         return 1
+    #     # case n > 1
+    #     else:
+    #         return 1 + fib(n-1)
+    #
+    # print(fib(5))
 
-# other_dict = {
-#     1: [1, 2, 3, 6, 7, 10],
-#     2: 1,
-#     3: 2,
-# }
-#
-# print(len(other_dict[1]))
-# print(len("Cheese"))
-# print(type("Cheese"))
-# print(type(str))
-# print()
-# a_list = []
-# final_list = []
-# for i in range(4):
-#     a_list.append(i+1)
-# final_list = [a_list, a_list, a_list]
-# print(final_list)
-# final_list[2][2] = 7  # -> that is the same as saying this: a_list[2] = 7 which would result in the same output
-# print(final_list)
-"""
-To avoid changing every reference to a_list in final_list, you can import and use the copy module, like so (import at
- the top):
-"""
-# print("cheese", "cheese", "cheese", "cheese", "cheese", "cheese")
-# print("_________________________________________")
-# a_list = []
-# final_list = []
-# for i in range(4):
-#     a_list.append(i + 1)
-#
-# # Create independent copies using copy.deepcopy()
-# final_list = [copy.deepcopy(a_list) for i in range(3)]
-#
-# print(final_list)
-# final_list[2][2] = 7
-# print(final_list)
+    # print(1 % 3)  # This will be 1 because 1 goes into 3 0 original_times with remainder 1
+    # print(2 % 3)  # This will be 2 because 2 goes into 3 0 original_times (2/3) with 2 remaining
+    # print(3 % 7)  # Same thing here. The remainder will be 3 because 3 goes into 7 0 original_times with 3 remaining
 
-# def get_coordinates():
-#     return (3, 4)
-#
-#
-# x, y = get_coordinates()
-# print(f"X: {x}, Y: {y}")
-#
-# # Tuples as dictionary keys
-# coordinates_dict = {(1, 2): "Point A", (3, 4): "Point B"}
-# print(coordinates_dict[(1, 2)])
-#
-# # Constant data
-# PI = (3.14159,)
-# radius = 5
-# area = PI[0] * radius**2
-# print(f"Area of the circle: {area}")
+    # my_dict = {
+    #     "Claire": 1,
+    #     "Eric": 0,
+    #     100: 3
+    # }
+    # if my_dict["Eric"]:
+    #     print(True)
+    # if "Eric" in my_dict:
+    #     print(False)
 
-# my_string = "cheese"
-# size_of_string = my_string.__sizeof__()
-#
-# print(f"Size of the string 'cheese': {size_of_string} bytes")
+    # other_dict = {
+    #     1: [1, 2, 3, 6, 7, 10],
+    #     2: 1,
+    #     3: 2,
+    # }
+    #
+    # print(len(other_dict[1]))
+    # print(len("Cheese"))
+    # print(type("Cheese"))
+    # print(type(str))
+    # print()
+    # a_list = []
+    # final_list = []
+    # for i in range(4):
+    #     a_list.append(i+1)
+    # final_list = [a_list, a_list, a_list]
+    # print(final_list)
+    # final_list[2][2] = 7  # -> that is the same as saying this: a_list[2] = 7 which would result in the same output
+    # print(final_list)
+    """
+    To avoid changing every reference to a_list in final_list, you can import and use the copy module, like so (import at
+     the top):
+    """
+    # print("cheese", "cheese", "cheese", "cheese", "cheese", "cheese")
+    # print("_________________________________________")
+    # a_list = []
+    # final_list = []
+    # for i in range(4):
+    #     a_list.append(i + 1)
+    #
+    # # Create independent copies using copy.deepcopy()
+    # final_list = [copy.deepcopy(a_list) for i in range(3)]
+    #
+    # print(final_list)
+    # final_list[2][2] = 7
+    # print(final_list)
 
-# word = "cheese", "other cheese"
-# print(word)
-# print(word[0], len(word[0]))
-# print(word[1], len(word[1]))
-# print(word[0][0], len(word[0][:5]))
+    # def get_coordinates():
+    #     return (3, 4)
+    #
+    #
+    # x, y = get_coordinates()
+    # print(f"X: {x}, Y: {y}")
+    #
+    # # Tuples as dictionary keys
+    # coordinates_dict = {(1, 2): "Point A", (3, 4): "Point B"}
+    # print(coordinates_dict[(1, 2)])
+    #
+    # # Constant data
+    # PI = (3.14159,)
+    # radius = 5
+    # area = PI[0] * radius**2
+    # print(f"Area of the circle: {area}")
 
-# num_count = 92983
-# print(len(str(num_count)))
-# print(list(str(num_count)))
-# num_count = list(str(num_count))
-# length = len(num_count)
-# for i in range(1, length+1):
-#     print(num_count[length-i])
+    # my_string = "cheese"
+    # size_of_string = my_string.__sizeof__()
+    #
+    # print(f"Size of the string 'cheese': {size_of_string} bytes")
+
+    # word = "cheese", "other cheese"
+    # print(word)
+    # print(word[0], len(word[0]))
+    # print(word[1], len(word[1]))
+    # print(word[0][0], len(word[0][:5]))
+
+    # num_count = 92983
+    # print(len(str(num_count)))
+    # print(list(str(num_count)))
+    # num_count = list(str(num_count))
+    # length = len(num_count)
+    # for i in range(1, length+1):
+    #     print(num_count[length-i])
 
 """
 Testing a lot of code here for the Will smith movie picker
 """
-if True:
+if False:
     no = "no"
     print("Welcome to this Will Smith Movie selector:")
     WS_movies = {
@@ -279,11 +280,31 @@ if True:
                 movie = int(movie)
 
 
+"""
+Testing other stuff from here to the bottom
+Binary Search for CODEPATH TIP TF Pre-work video
+"""
 
 
+def binary_search(the_list, target_num):
+    mid = len(the_list)//2
+
+    if not the_list:
+        return -1
+
+    if the_list[mid] == target_num:
+        return f"{num} is in the list at position:"
+    elif the_list[mid] > target_num:
+        return binary_search(the_list[:mid], target_num)
+    else:
+        return binary_search(the_list[mid+1:], target_num)
 
 
-
-
-
+my_list = [1, 4, 5, 8, 20, 24]
+num = 2
+print(binary_search(my_list, num), end=" ")
+if binary_search(my_list, num) == f"{num} is in the list at position:":
+    print(my_list.index(num))
+elif binary_search(my_list, num) == -1:
+    print("not in the list")
 

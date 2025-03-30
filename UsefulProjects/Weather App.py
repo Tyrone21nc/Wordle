@@ -13,7 +13,7 @@ import json
 
 root = Tk()
 root.title("Romain's Weather App")
-root.iconbitmap("C:\\Users\\thier\PycharmProjects\\pythonYourProject\\UMBC_profpic.jpg")
+root.iconbitmap("C:\\Users\\thier\\PycharmProjects\\pythonYourProject\\UMBC_profpic.jpg")
 root.geometry("600x75")
 bg_color = ""
 
@@ -30,7 +30,7 @@ def zip_look_up():
 #
 try:
     # To request API
-    zip_code = "21113"
+    zip_code = "20902"
     api_request = requests.get(
         f"https://www.airnowapi.org/aq/observation/zipCode/current/?format=application/json&zipCode={zip_code}&distance=15&API_KEY=BC0A9066-17E8-4F80-9437-F9B7B701A27B")
     api = json.loads(api_request.content)

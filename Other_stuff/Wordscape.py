@@ -20,6 +20,8 @@ check_word = {
 word = random.choice(check_word["smoart"])
 
 confirm_words_from_dict = 0
+
+
 def draw_board(words_dict):
     # Drawing board
     count = 0
@@ -32,6 +34,8 @@ def draw_board(words_dict):
                     print("——————")
                     print()
             count += 1
+
+
 def final_draw_board(words_dict):
     # Drawing final board
     print("Below is the list of all possible words with the letters")

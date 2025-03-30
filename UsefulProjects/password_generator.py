@@ -5,6 +5,8 @@ Objective: Create an algorithm that validates passwords on making sure it includ
 filename: password_checker.py
 """
 import random
+from pymongo import MongoClient
+
 
 
 def generate_password(f_name):
@@ -50,17 +52,48 @@ def generate_password(f_name):
 
     return password
 
+# Connect to MongoDB
+client = MongoClient("mongodb://localhost:27017/")
+db = client["passwordManager"]
+collection = db["savedPasswords"]
+
+def save_password(password, nameF="First", nameL="Last"):
+    collection.insert_one({"password": password, "first-name": nameF, "last-name": nameL})
+    print("\033[32mPassword saved!\033[0m")
+def display_passwords():
+    passwords = collection.find()
+    print("\n\n\033[44mDISPLAYING PASSWORDS\033[0m")
+    for entry in passwords:
+        print("\033[32m________________________\033[0m")
+        print(entry["password"])
+        print("\033[32m¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯\033[0m\n")
+
+
 
 if __name__ == "__main__":
     print("This is a random password generator.\nWe just need your first name or nick-name\n")
-    first_name = "romain"
     fname = input("Please enter your first name: ").lower()
+    gene_pass = ""
     password_good = False
     while not password_good:
         if not fname:
             fname = "abcde"
-        print(f"\033[32m{generate_password(fname)}\033[0m")
+        gene_pass = generate_password(fname)
+        print(f"\033[32m{gene_pass}\033[0m")
         like_password = input("Do you like your password (y/n): ").lower()
         if like_password == "y":
             password_good = True
-            print("I'm glad to hear")
+            print("I'm glad to read")
+
+    if(password_good):
+        fname = input("Enter first name: ")
+        lname = input("Enter last name: ")
+        if(not fname):
+            fname = "Tyrone"
+        if(not lname):
+            lname = "Brown"
+        save_password(gene_pass, fname, lname)
+
+    display_passwords()
+    
+
