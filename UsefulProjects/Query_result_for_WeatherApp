@@ -1,0 +1,7 @@
+[
+{"DateObserved":"2024-04-13","HourObserved":19,"LocalTimeZone":"EST","ReportingArea":"Metro Baltimore","StateCode":"MD",
+    "Latitude":39.1876,"Longitude":-76.5904,"ParameterName":"O3","AQI":45,"Category":{"Number":1,"Name":"Good"}},
+
+{"DateObserved":"2024-04-13","HourObserved":19,"LocalTimeZone":"EST","ReportingArea":"Metro Baltimore","StateCode":"MD",
+    "Latitude":39.1876,"Longitude":-76.5904,"ParameterName":"PM2.5","AQI":12,"Category":{"Number":1,"Name":"Good"}}
+]

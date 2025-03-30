@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial;
+      padding: 10px;
+      background: #333;
+    }
+
+    /* Header/Blog Title */
+    .header {
+      padding: 30px;
+      text-align: center;
+      background: #c1946a;
+    }
+
+    .header h1 {
+      font-size: 50px;
+    }
+
+    /* Style the top navigation bar */
+    .topnav {
+      overflow: hidden;
+      background-color: #587e76;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    /* Style the topnav links */
+    .topnav a {
+      float: left;
+      display: block;
+      color: white;
+      font-weight: bold;
+      text-align: center;
+      padding: 14px 10px;
+      text-decoration: none;
+      margin-left: 150px;
+      margin-right: 150px;
+      background-color: #7e4a35;
+      background-color: #587e76;
+    }
+
+    /* Change color on hover */
+    .topnav a:hover {
+      background-color: #333;
+      color: white;
+    }
+
+    /* Create two unequal columns that floats next to each other */
+    /* Left column */
+    .leftcolumn {
+      float: left;
+      width: 75%;
+    }
+
+    /* Right column */
+    .rightcolumn {
+      float: left;
+      width: 25%;
+      background-color: #333;
+      padding-left: 20px;
+    }
+
+    /* Fake image */
+    .fakeimg {
+      background-color: #587e76;
+    <!--  width: 100%;-->
+      width: fit-content;
+      height: fit-content;
+      padding: 20px;
+      item-align: center;
+    }
+
+    /* Add a card effect for articles */
+    .card {
+      background-color: #c1946a;
+      padding: 20px;
+      margin-top: 20px;
+      max-width: 100%;
+      height: auto;  }
+
+    /* Clear floats after the columns */
+    .row::after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    /* Footer */
+    .footer {
+      padding: 20px;
+      text-align: center;
+      background: #c1946a;
+      margin-top: 20px;
+      color: white;
+    }
+
+    /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+    @media screen and (max-width: 800px) {
+      .leftcolumn, .rightcolumn {
+        width: 100%;
+        padding: 0;
+      }
+    }
+
+    /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+    @media screen and (max-width: 400px) {
+      .topnav a {
+        float: none;
+        width: 100%;
+      }
+    }
+
+    .image1 {
+      border-radius: 50%;
+    }
+
+    .item {
+      padding: 10px;
+      margin-left: 170px;
+      margin-right: 20px;
+      width: fit-content;
+      height: fit-content;
+      color: white;
+    }
+
+    .container {
+      display: flex;
+      flex-direction; column;
+      justify-content: space-between;
+      }
+
+    .pics {
+      background-color: #c1946a;
+      height: 0;
+      height: 25%;
+      aspect-ratio: 1/1;
+      border-status: 24px;
+      overflow: hidden;
+    }
+    .pics {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      height: 20%;
+    }
+    .rom-NCHS {
+      font-family: monospace;
+      display: grid;
+      font-size: 18px;
+    }
+    .rom-NCHS:hover {
+      background-color: #333;
+    }
+    .img-descr h4 {
+      display: grid;
+      font-family: monospace;
+      font-size: 18px;
+    }
+    .img-descr h4:hover {
+    background-color: #333;
+    }
+    .long-text {
+      font-size: 20px;
+    }
+
+  </style>
+  <title>Portfolio Page - Romain Dzeinse</title>
+</head>
+<body>
+
+<div class="header">
+<!--  <h1>My Website</h1>-->
+<!--  <p>Resize the browser window to see the effect.</p>-->
+  <nav class="container">
+    <div class="item">
+      <img class="image1" src="HeadshotPhoto.png" alt="Headshot of Romain" width="300px">
+    </div>
+    <div class="item">
+      <h1 class="title">Welcome To My Portfolio</h1>
+      <h2>The name is <em>Romain Dzeinse</em></h2>
+    </div>
+  </nav>
+</div>
+
+<div class="topnav">
+  <a href="#">Home</a>
+  <a href="#">About</a>
+  <a href="#">Projects</a>
+  <a href="#">Contact</a>
+<!--  <a href="#" style="float:right">Link</a>-->
+</div>
+
+<div class="row">
+  <div class="leftcolumn">
+    <div class="card">
+      <h2 style="color: white; text-align: center;">How it started [2019]</h2>
+<!--      <h5 style="color: white;">[2019] - June 14, 2024</h5>-->
+      <div class="pics">
+        <div class="fakeimg">
+          <img src="freshman_trio_copy.jpg" alt="Freshman HS photo" width="189px">
+          <h4  class="rom-NCHS" style="color: white; text-decoration: none;">My freshman year in High School</h4>
+        </div>
+
+<!--        <hr>-->
+
+        <div class="fakeimg">
+          <a href="https://scratch.mit.edu/" target="_blank"><img src="Scratch-cat.png" width="250px"></a>
+          <a href="https://scratch.mit.edu/" class="img-descr" target="_blank" style="text-decoration: none;"><h4 style="color: white;">Scratch logo</h4></a>
+        </div>
+
+<!--        <hr>-->
+
+        <div class="fakeimg">
+          <a href="https://code.org/" target="_blank"><img src="code.org.jpg" width="250px"> </a>
+          <a href="https://code.org/" class="img-descr" target="_blank" style="text-decoration: none; "><h4 style="color: white;">CODE.org logo</h4></a>
+        </div>
+
+      </div>
+      <p class="long-text">Like many children in the US, I was introduced to coding in middle school and started coding on <b>Scratch</b> and <b>CODE.org</b> making the Scratch Car move linearly.
+      Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock,
+        a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the
+        word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and
+        Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet...",
+        comes from a line in section 1.10.32.</p>
+    </div>
+    <div class="card">
+      <h2 style="color: white; text-align: center;">How it is now [Now - Future]</h2>
+<!--      <h5 style="color: white;">[Now - Future] - June 14, 2024</h5>-->
+      <div class="pics">
+        <div class="fakeimg" style="height:50px;">
+          <img src="Cali-pic2.jpg" alt="Add a picture">
+          <a href="https://scratch.mit.edu/" class="img-descr" target="_blank" style="text-decoration: none;"><h4 style="color: white;">Scratch logo</h4></a>
+        </div>
+
+        <div class="fakeimg" style="height:50px;">
+          <img src="Cali-pic2.jpg" alt="Add a picture">
+          <a href="https://scratch.mit.edu/" class="img-descr" target="_blank" style="text-decoration: none;"><h4 style="color: white;">Scratch logo</h4></a>
+        </div>
+        
+        <div class="fakeimg" style="height:50px;">
+          <img src="Cali-pic2.jpg" alt="Add a picture">
+          <a href="https://scratch.mit.edu/" class="img-descr" target="_blank" style="text-decoration: none;"><h4 style="color: white;">Scratch logo</h4></a>
+        </div>
+
+        <div class="fakeimg" style="height:50px;">
+          <img src="Cali-pic2.jpg" alt="Add a picture;">
+          <a href="https://scratch.mit.edu/" class="img-descr" target="_blank" style="text-decoration: none;"><h4 style="color: white;">Scratch logo</h4></a>
+        </div>
+      </div>
+
+      <p class="long-text">Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+        exercitation ullamco. Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing
+        elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+        exercitation ullamco. Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing
+        elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+        exercitation ullamco.</p>
+    </div>
+  </div>
+  <div class="rightcolumn">
+    <div class="card">
+      <h3 style="color: white;">About Me</h3>
+      <div class="fakeimg" style="height:100px;">
+        <img src="" alt="Picture of the author running">
+      </div>
+      <p>Get to know more about me and my aspirations. Learn about what drives me to code, why coding is so important.</p>
+    </div>
+    <div class="card">
+      <h3 style="color: white;">Topics of Interest</h3>
+
+      <div class="fakeimg">
+        <p>Image</p>
+        <img src="" alt="a picture">
+      </div>
+      <div class="fakeimg">
+        <p>Image</p>
+        <img src="" alt="a picture">
+      </div>
+      <div class="fakeimg">
+        <p>Image</p>
+        <img src="" alt="a picture">
+      </div>
+
+    </div>
+    <div class="card">
+      <h3 style="color: white;">Professional Documents</h3>
+      <p>Some text...</p>
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  <h2>Footer</h2>
+</div>
+
+</body>
+</html>
+
+
