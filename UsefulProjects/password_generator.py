@@ -58,16 +58,28 @@ db = client["passwordManager"]
 collection = db["savedPasswords"]
 
 def save_password(password, nameF="First", nameL="Last"):
+    # Ensure you are using consistent field names with dashes
     collection.insert_one({"password": password, "first-name": nameF, "last-name": nameL})
     print("\033[32mPassword saved!\033[0m")
+
 def display_passwords():
-    passwords = collection.find()
+    users = collection.find({}, {"_id": 0, "first-name": 1, "last-name": 1, "password": 1})
     print("\n\n\033[44mDISPLAYING PASSWORDS\033[0m")
-    for entry in passwords:
+    for user in users:
         print("\033[32m________________________\033[0m")
-        print(entry["password"])
+        print("\033[43mFirst Name: " + user["first-name"] + "\033[0m")
+        print("\033[43mLast Name: " + user["last-name"] + "\033[0m")
+        print("\033[43mPassword: " + user["password"] + "\033[0m")
         print("\033[32m¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯\033[0m\n")
 
+def delete_by_nameF(nameF):
+    passwords = collection
+    print(f"\033[31mDELETING: {nameF}\033[0m")
+    result = passwords.delete_one({"first-name": nameF})
+    if result.deleted_count > 0:
+        print("deleted successfully")
+    else:
+        print("invalid name")
 
 
 if __name__ == "__main__":
@@ -94,6 +106,9 @@ if __name__ == "__main__":
             lname = "Brown"
         save_password(gene_pass, fname, lname)
 
+    display_passwords()
+    delete_name = input("Type the name you want to delete: ")
+    delete_by_nameF(delete_name)
     display_passwords()
     
 
